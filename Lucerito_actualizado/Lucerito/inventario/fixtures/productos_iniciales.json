@@ -1,0 +1,302 @@
+[
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "LAB-001",
+      "nombre": "Labial mate rosa quemado",
+      "descripcion": "Labial mate de larga duración color rosa quemado.",
+      "categoria": "Maquillaje",
+      "marca": "Lucerito",
+      "precio": "18.50",
+      "cantidad_existente": 25,
+      "stock_minimo": 5,
+      "estado": true,
+      "fecha_registro": "2026-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "BASE-002",
+      "nombre": "Base líquida beige claro",
+      "descripcion": "Base líquida cobertura media tono beige claro.",
+      "categoria": "Maquillaje",
+      "marca": "Glow Andina",
+      "precio": "32.00",
+      "cantidad_existente": 40,
+      "stock_minimo": 8,
+      "estado": true,
+      "fecha_registro": "2026-02-02T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "RIM-003",
+      "nombre": "Rímel volumen extremo",
+      "descripcion": "Rímel a prueba de agua que alarga y da volumen.",
+      "categoria": "Maquillaje",
+      "marca": "Lucerito",
+      "precio": "22.90",
+      "cantidad_existente": 15,
+      "stock_minimo": 6,
+      "estado": true,
+      "fecha_registro": "2026-03-03T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "CRE-004",
+      "nombre": "Crema hidratante facial",
+      "descripcion": "Crema hidratante con ácido hialurónico para todo tipo de piel.",
+      "categoria": "Cuidado facial",
+      "marca": "Natura Viva",
+      "precio": "45.00",
+      "cantidad_existente": 30,
+      "stock_minimo": 10,
+      "estado": true,
+      "fecha_registro": "2026-04-04T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "SER-005",
+      "nombre": "Sérum vitamina C",
+      "descripcion": "Sérum facial con vitamina C para luminosidad.",
+      "categoria": "Cuidado facial",
+      "marca": "Natura Viva",
+      "precio": "58.00",
+      "cantidad_existente": 3,
+      "stock_minimo": 5,
+      "estado": true,
+      "fecha_registro": "2026-05-05T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "BLO-006",
+      "nombre": "Bloqueador solar FPS 50",
+      "descripcion": "Bloqueador solar FPS 50 toque seco.",
+      "categoria": "Cuidado facial",
+      "marca": "Sol Care",
+      "precio": "38.50",
+      "cantidad_existente": 0,
+      "stock_minimo": 7,
+      "estado": true,
+      "fecha_registro": "2026-06-06T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "SHA-007",
+      "nombre": "Shampoo keratina",
+      "descripcion": "Shampoo con keratina para cabello maltratado 500 ml.",
+      "categoria": "Cuidado capilar",
+      "marca": "Kera Suave",
+      "precio": "27.00",
+      "cantidad_existente": 50,
+      "stock_minimo": 12,
+      "estado": true,
+      "fecha_registro": "2026-07-07T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "ACO-008",
+      "nombre": "Acondicionador de argán",
+      "descripcion": "Acondicionador con aceite de argán 500 ml.",
+      "categoria": "Cuidado capilar",
+      "marca": "Kera Suave",
+      "precio": "29.00",
+      "cantidad_existente": 45,
+      "stock_minimo": 12,
+      "estado": true,
+      "fecha_registro": "2026-08-08T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "MAS-009",
+      "nombre": "Mascarilla capilar de coco",
+      "descripcion": "Mascarilla capilar reparadora con coco.",
+      "categoria": "Cuidado capilar",
+      "marca": "Coco Hair",
+      "precio": "35.00",
+      "cantidad_existente": 20,
+      "stock_minimo": 6,
+      "estado": true,
+      "fecha_registro": "2026-09-09T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "COR-010",
+      "nombre": "Crema corporal de karité",
+      "descripcion": "Crema corporal de karité y vainilla 400 ml.",
+      "categoria": "Cuidado corporal",
+      "marca": "Dulce Piel",
+      "precio": "31.50",
+      "cantidad_existente": 18,
+      "stock_minimo": 5,
+      "estado": true,
+      "fecha_registro": "2026-01-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "EXF-011",
+      "nombre": "Exfoliante corporal de café",
+      "descripcion": "Exfoliante corporal de café y azúcar.",
+      "categoria": "Cuidado corporal",
+      "marca": "Dulce Piel",
+      "precio": "24.00",
+      "cantidad_existente": 22,
+      "stock_minimo": 5,
+      "estado": true,
+      "fecha_registro": "2026-02-11T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "PER-012",
+      "nombre": "Perfume floral Jazmín Rosa",
+      "descripcion": "Perfume floral de 100 ml con notas de jazmín y rosa.",
+      "categoria": "Perfumería",
+      "marca": "Essenza",
+      "precio": "89.90",
+      "cantidad_existente": 10,
+      "stock_minimo": 3,
+      "estado": true,
+      "fecha_registro": "2026-03-12T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "PER-013",
+      "nombre": "Colonia cítrica fresca",
+      "descripcion": "Colonia cítrica fresca de 100 ml.",
+      "categoria": "Perfumería",
+      "marca": "Essenza",
+      "precio": "65.00",
+      "cantidad_existente": 8,
+      "stock_minimo": 3,
+      "estado": true,
+      "fecha_registro": "2026-04-13T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "ESM-014",
+      "nombre": "Esmalte rosa pastel",
+      "descripcion": "Esmalte rosa pastel de larga duración.",
+      "categoria": "Uñas",
+      "marca": "Color Chic",
+      "precio": "9.90",
+      "cantidad_existente": 60,
+      "stock_minimo": 15,
+      "estado": true,
+      "fecha_registro": "2026-05-14T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "ESM-015",
+      "nombre": "Esmalte rojo carmesí",
+      "descripcion": "Esmalte rojo carmesí brillo intenso.",
+      "categoria": "Uñas",
+      "marca": "Color Chic",
+      "precio": "9.90",
+      "cantidad_existente": 55,
+      "stock_minimo": 15,
+      "estado": true,
+      "fecha_registro": "2026-06-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "KIT-016",
+      "nombre": "Kit de manicura 5 piezas",
+      "descripcion": "Kit con limas, cortaúñas y empujacutícula.",
+      "categoria": "Uñas",
+      "marca": "Beauty Tools",
+      "precio": "19.90",
+      "cantidad_existente": 12,
+      "stock_minimo": 4,
+      "estado": true,
+      "fecha_registro": "2026-07-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "BRO-017",
+      "nombre": "Set de brochas x12",
+      "descripcion": "Set de 12 brochas sintéticas para rostro y ojos.",
+      "categoria": "Accesorios de belleza",
+      "marca": "Beauty Tools",
+      "precio": "42.00",
+      "cantidad_existente": 14,
+      "stock_minimo": 4,
+      "estado": true,
+      "fecha_registro": "2026-08-17T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "ESP-018",
+      "nombre": "Esponja de maquillaje",
+      "descripcion": "Esponja tipo beauty blender para base.",
+      "categoria": "Accesorios de belleza",
+      "marca": "Glow Andina",
+      "precio": "8.50",
+      "cantidad_existente": 70,
+      "stock_minimo": 20,
+      "estado": true,
+      "fecha_registro": "2026-09-18T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "PAL-019",
+      "nombre": "Paleta de sombras nude",
+      "descripcion": "Paleta de 12 sombras tonos nude mate y brillo.",
+      "categoria": "Maquillaje",
+      "marca": "Lucerito",
+      "precio": "49.90",
+      "cantidad_existente": 9,
+      "stock_minimo": 4,
+      "estado": true,
+      "fecha_registro": "2026-01-19T10:00:00Z"
+    }
+  },
+  {
+    "model": "inventario.producto",
+    "fields": {
+      "codigo": "AGU-020",
+      "nombre": "Agua micelar 400 ml",
+      "descripcion": "Agua micelar desmaquillante para piel sensible.",
+      "categoria": "Cuidado facial",
+      "marca": "Natura Viva",
+      "precio": "21.00",
+      "cantidad_existente": 0,
+      "stock_minimo": 6,
+      "estado": true,
+      "fecha_registro": "2026-02-20T10:00:00Z"
+    }
+  }
+]

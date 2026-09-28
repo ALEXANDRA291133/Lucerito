@@ -1,0 +1,14 @@
+{% extends 'inventario/base.html' %}
+{% block title %}Eliminar · Lucerito{% endblock %}
+{% block content %}
+<div class="card-lucerito p-4 mx-auto form-lucerito text-center">
+  <h1 class="h5">¿Desactivar este producto?</h1>
+  <p><strong>{{ producto.codigo }}</strong> — {{ producto.nombre }}</p>
+  <p class="text-muted small">Se aplicará borrado lógico (estado inactivo), no se borra de la base de datos.</p>
+  <form method="post" class="d-flex gap-2 justify-content-center">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-eliminar">Sí, desactivar</button>
+    <a href="{% url 'producto_list' %}" class="btn btn-outline-lucerito">Cancelar</a>
+  </form>
+</div>
+{% endblock %}

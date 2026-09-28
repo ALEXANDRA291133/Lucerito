@@ -1,0 +1,40 @@
+/* Lucerito · Minimalista y elegante · Pasteles rosados */
+:root {
+  --rosa-suave: #F8C8DC;
+  --rosa-claro: #FFB6C1;
+  --crema: #FFF5F5;
+  --fondo: #FAFAFA;
+  --carmesi: #C72C41;
+  --vino: #D81B60;
+  --rosa-medio: #E57373;
+  --texto: #2C3E50;
+  --gris: #4A4A4A;
+}
+
+body { background: var(--crema); color: var(--texto); font-family: 'Segoe UI', system-ui, sans-serif; }
+
+.navbar-lucerito { background: linear-gradient(90deg, var(--rosa-suave), var(--rosa-claro)); }
+.navbar-lucerito .navbar-brand, .navbar-lucerito .nav-link { color: var(--texto); }
+.btn-chat { background: var(--carmesi); color: #fff !important; border-radius: 20px; padding-inline: 1rem; }
+
+.card-lucerito { background: #fff; border: 1px solid var(--rosa-suave); border-radius: 16px; box-shadow: 0 2px 12px rgba(199,44,65,.08); }
+.hero { background: linear-gradient(135deg, #fff, var(--crema)); }
+
+.btn-lucerito { background: var(--vino); border-color: var(--vino); color: #fff; border-radius: 12px; }
+.btn-lucerito:hover { background: var(--carmesi); border-color: var(--carmesi); color: #fff; }
+.btn-outline-lucerito { border: 1px solid var(--rosa-medio); color: var(--carmesi); border-radius: 12px; }
+.btn-outline-lucerito:hover { background: var(--rosa-suave); color: var(--texto); }
+.btn-eliminar { background: var(--carmesi); color: #fff; border-radius: 12px; }
+.badge-lucerito { background: var(--rosa-suave); color: var(--texto); }
+.form-lucerito { max-width: 640px; }
+.footer-lucerito { background: var(--rosa-suave); color: var(--gris); }
+
+.chat-lucerito { max-width: 720px; }
+.chat-box { max-height: 55vh; overflow-y: auto; display: flex; flex-direction: column; gap: .6rem; }
+.msg-user { background: var(--crema); border: 1px solid var(--rosa-claro); border-radius: 12px; padding: .5rem .8rem; align-self: flex-end; max-width: 90%; white-space: pre-wrap; }
+.msg-ia { background: #fff; border: 1px solid var(--rosa-suave); border-left: 4px solid var(--vino); border-radius: 12px; padding: .5rem .8rem; white-space: pre-wrap; }
+
+@media (max-width: 576px) {
+  .table { font-size: .85rem; }
+  .hero { padding: 1rem !important; }
+}

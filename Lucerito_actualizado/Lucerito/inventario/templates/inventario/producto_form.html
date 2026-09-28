@@ -1,0 +1,21 @@
+{% extends 'inventario/base.html' %}
+{% block title %}{{ accion }} producto · Lucerito{% endblock %}
+{% block content %}
+<div class="card-lucerito p-4 mx-auto form-lucerito">
+  <h1 class="h4 mb-3">{{ accion }} producto</h1>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="mb-3">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}<div class="text-danger small">{{ field.errors|join:', ' }}</div>{% endif %}
+      </div>
+    {% endfor %}
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-lucerito flex-fill">Guardar</button>
+      <a href="{% url 'producto_list' %}" class="btn btn-outline-lucerito">Cancelar</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

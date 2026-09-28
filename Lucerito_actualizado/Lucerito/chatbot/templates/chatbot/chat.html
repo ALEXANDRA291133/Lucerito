@@ -1,0 +1,55 @@
+{% extends 'inventario/base.html' %}
+{% block title %}Asistente IA · Lucerito{% endblock %}
+{% block content %}
+<div class="mx-auto chat-lucerito">
+  <h1 class="h4 mb-1">Asistente Lucerito</h1>
+  <p class="text-muted small">Pregunta por productos, precios, stock y categorías. Respuestas en texto plano.</p>
+  <div id="chat-box" class="card-lucerito p-3 mb-3 chat-box">
+    {% for m in historial %}
+      <div class="msg-user"><strong>Tú:</strong> {{ m.pregunta }}</div>
+      <div class="msg-ia">{{ m.respuesta|linebreaksbr }}</div>
+    {% empty %}
+      <p class="text-muted">Hola, soy Lucerito. Pregúntame por ejemplo: ¿Cuál es el producto más caro? ¿Qué hay con poco stock?</p>
+    {% endfor %}
+  </div>
+  <form id="chat-form" class="d-flex gap-2">
+    {% csrf_token %}
+    <input id="chat-input" type="text" class="form-control" placeholder="Escribe tu consulta..." autocomplete="off" required>
+    <button class="btn btn-lucerito" type="submit">Enviar</button>
+  </form>
+  <p id="chat-estado" class="small text-muted mt-2"></p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const form = document.getElementById('chat-form');
+const input = document.getElementById('chat-input');
+const box = document.getElementById('chat-box');
+const estado = document.getElementById('chat-estado');
+const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const pregunta = input.value.trim();
+  if (!pregunta) return;
+  box.insertAdjacentHTML('beforeend', `<div class="msg-user"><strong>Tú:</strong> ${pregunta}</div>`);
+  input.value = '';
+  estado.textContent = 'Lucerito está pensando...';
+  try {
+    const resp = await fetch('', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-CSRFToken': csrftoken},
+      body: new URLSearchParams({pregunta}),
+    });
+    const data = await resp.json();
+    box.insertAdjacentHTML('beforeend', `<div class="msg-ia"></div>`);
+    box.lastElementChild.textContent = data.respuesta;
+    if (!data.ok) estado.textContent = 'Nota: la IA local no está disponible, respuesta de respaldo.';
+    else estado.textContent = '';
+  } catch (err) {
+    estado.textContent = 'No se pudo conectar con el servidor.';
+  }
+  box.scrollTop = box.scrollHeight;
+});
+</script>
+{% endblock %}

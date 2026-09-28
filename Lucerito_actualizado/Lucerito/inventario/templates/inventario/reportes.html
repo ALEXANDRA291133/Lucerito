@@ -1,0 +1,30 @@
+{% extends 'inventario/base.html' %}
+{% block title %}Reportes · Lucerito{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">Reportes del inventario</h1>
+<div class="d-flex flex-wrap gap-2 mb-3">
+  {% for clave, titulo, desc in opciones %}
+    <a href="{% url 'reportes' %}?tipo={{ clave }}"
+       class="btn {% if clave == clave_actual %}btn-lucerito{% else %}btn-outline-lucerito{% endif %} btn-sm"
+       title="{{ desc }}">{{ titulo }}</a>
+  {% endfor %}
+</div>
+<div class="card-lucerito p-4">
+  <h2 class="h5">{{ resultado.titulo }}</h2>
+  <p class="text-muted">{{ resultado.resumen }}</p>
+  {% if resultado.datos %}
+  <div class="table-responsive">
+    <table class="table table-sm table-striped">
+      <thead><tr>{% for k in resultado.datos.0.keys %}<th>{{ k }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for fila in resultado.datos %}
+        <tr>{% for v in fila.values %}<td>{{ v }}</td>{% endfor %}</tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="text-muted">Sin datos para este reporte.</p>
+  {% endif %}
+</div>
+{% endblock %}
